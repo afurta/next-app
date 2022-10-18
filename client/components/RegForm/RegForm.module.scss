@@ -1,40 +1,47 @@
-@import '../../utils/colors';
-
+@import "../../utils/colors";
 .reg_form {
-  background: #fff;
-  width: 500px;
-  display: -webkit-box;
   display: flex;
+  flex-direction: column;
+
+  width: 500px;
+
+  border-radius: 4px;
+  background: $color-white;
+  box-shadow: 0 2px 25px $form-shadow;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-          flex-direction: column;
-  border-radius: 4px;
-  box-shadow: 0 2px 25px $form-shadow;
 }
 .reg_form h1 {
-  padding: 35px 35px 0 35px;
-  font-weight: 300;
   margin: 0;
-  color: black;
+  padding: 35px 35px 0 35px;
+
+  color: $color-black;
+
+  font-weight: 300;
 }
 .reg_form .content {
   padding: 35px;
+
   text-align: center;
 }
 .reg_form .input_field {
   padding: 12px 5px;
 }
 .reg_form .input_field input {
-  font-size: 16px;
   display: block;
-  font-family: 'Rubik', sans-serif;
+
   width: 100%;
   padding: 10px 1px;
+
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+
   border: 0;
   border-bottom: 1px solid #747474;
   outline: none;
-  -webkit-transition: all .2s;
-  transition: all .2s;
+
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
 }
 .reg_form .input_field input::-webkit-input-placeholder {
   text-transform: uppercase;
@@ -52,47 +59,53 @@
   text-transform: uppercase;
 }
 .reg_form .input_field input:focus {
-  border-color: #222;
+  border-color: #222222;
 }
 .reg_form a.link {
+  display: inline-block;
+
+  margin-top: 20px;
+
   text-decoration: none;
-  color: #747474;
   letter-spacing: 0.2px;
   text-transform: uppercase;
-  display: inline-block;
-  margin-top: 20px;
+
+  color: #747474;
 }
 .reg_form .action {
-  display: -webkit-box;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-          flex-direction: row;
+
+  flex-direction: row;
 }
 .reg_form .action button {
   width: 100%;
-  border: none;
   padding: 18px;
-  font-family: 'Rubik', sans-serif;
+
   cursor: pointer;
-  text-transform: uppercase;
-  background: #e8e9ec;
-  color: #777;
-  border-bottom-left-radius: 4px;
-  border-bottom-right-radius: 0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
   letter-spacing: 0.2px;
+  text-transform: uppercase;
+
+  color: #777777;
+  border: none;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 4px;
   outline: 0;
-  -webkit-transition: all .3s;
-  transition: all .3s;
+  background: #e8e9ec;
+
+  font-family: "Rubik", sans-serif;
 }
 .reg_form .action button:hover {
   background: $form-default-btn;
 }
 .reg_form .action button:nth-child(2) {
-  background: #2d3b55;
-  color: #fff;
-  border-bottom-left-radius: 0;
+  color: $color-white;
   border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 0;
+  background: #2d3b55;
 }
 .reg_form .action button:nth-child(2):hover {
   background: $form-active-btn;

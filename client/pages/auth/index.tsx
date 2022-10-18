@@ -6,9 +6,9 @@ import { ICONS } from '../../assets/icons'
 import Image from 'next/image'
 
 const Auth = () => {
-    const [isAuth, setIsAuth] = useState<boolean>(false)
+    const [isAuth, setIsAuth] = useState<boolean>(false);
 
-    return(
+    return (
         <div className={styles.wrapper}>
             <div className={styles.wrapper__header}>
                 <Image 
